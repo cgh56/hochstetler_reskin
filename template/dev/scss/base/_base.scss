@@ -122,11 +122,11 @@ li > ol {
 
 /*	Blockquote  */
 
-blockquote {}
+blockquote 
 
-blockquote.left {}
+blockquote.left 
 
-blockquote.right {}
+blockquote.right 
 
 /* Other elements */
 
@@ -153,8 +153,8 @@ dd {
 	padding-left: 15px;
 }
 
-.sticky {}
-.bypostauthor {}
+.sticky 
+.bypostauthor 
 
 code,
 kbd,
@@ -276,9 +276,8 @@ textarea:focus {
 	outline: none;
 }
 
-fieldset {
+fieldset 
 
-}
 
 legend {
 	white-space: normal;
@@ -425,11 +424,11 @@ span > object {
 	margin-top: 0 !important;
 }
 
-.gallery dt {}
+.gallery dt 
 
-.gallery dd {}
+.gallery dd 
 
-.gallery dl a {}
+.gallery dl a 
 
 .gallery dl img {
 	width: 100%;
