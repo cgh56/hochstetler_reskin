@@ -1,5 +1,6 @@
-.container {
-    font-size: 23px;
-    display: grid;
-    grid-template-columns: max-content
+header{
+    .content{
+        display:grid;
+        grid-template-columns: 50% 50%;
+    }
 }
