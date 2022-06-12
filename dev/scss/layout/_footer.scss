@@ -3,33 +3,203 @@
 ============= */
 footer{
     
+    background-color: $dark-blue;
+    color: $green;
+    
+    
     .content{
-        display:grid;
-        grid-template-columns: 50% 50%;
-        grid-template-areas: 
-        "yoga 1"
-        "yoga 3"
-        ;
+            display:grid;
+            grid-template-columns: 100%;
+            margin: 30px;
+    
+            @include md{
+                display: grid;
+                grid-template-columns: 50% auto;
+                grid-template-areas:
+                "locations newsletter"
+                "locations follow";
+            }
+    
+            @include lg{
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-areas:
+                "locations newsletter follow";
+            }
 
-        @include md{
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-areas:
-            "yoga 3"
-            ;
-        }
+            h4{
+                font-family: 'Neucha';
+                font-size: 20px;
+                font-weight: 600;
+                padding-top: 30px;
+            }
 
-        img{
-            grid-area:logo;
-        }
+    
+            .locations, .follow{
+                ul{
+                    list-style: none;
+                    padding:0;
+                    display: inline-block;
 
-        h3{
-            grid-area:cora;
-        }
+                    h5{
+                       font-size: 16px;
+                       font-family: 'Open Sans';
+                       font-weight: 600;
+                       padding-bottom: 15px;
+                       padding-top: 15px;
+                       
+                    }
 
-        p{
-            grid-area:copyright;
-        }
+                    p{
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 10px;
+                    }
+                    .location-icon, .phone-icon{
+                        display: inline-block;
+                    }
 
+                }
+                
+            }
+            .locations{
+                .border-bottom{
+
+                    p{
+                        display: inline-block;
+                    }
+                    
+                    border-bottom: 2px solid white;
+                    padding: 10px;
+
+                }
+                @include md{
+                    grid-area: locations;
+                    margin-left: 10px;
+                }
+
+                @include lg{
+                    margin-left: 50px;
+                }
+
+                .border-bottom-3{
+                    border-bottom: 0px solid $yellow;
+                }
+
+            }
+
+            .newsletter{
+
+              
+                form{
+                    display: flex;
+                    padding: 20px 10px 20px 0px;
+
+                    input{
+                        width: 100%;
+                        background-color: $light-blue;
+                        border: none;
+                        font-family: 'Open Sans';
+                        color: $white;
+                        font-weight: 600;
+                        padding: 15px;
+
+                    }
+
+                    @include md{
+                        margin-left: 20px;
+
+                    }
+
+                    @include lg{
+                        margin-left: 30px;
+                        padding-top: 40px;
+                    }
+                }
+
+
+                h4{
+                    margin-left: 0px;
+
+                    @include md{
+                        margin-left: 20px;
+                    }
+
+                    @include lg{
+                        margin-left: 29px;
+                    }
+                }
+
+            button{
+                background-color: $yellow;
+                font-family: "Open Sans";
+                font-weight: 500;
+                font-size: 16px;
+                color: $white;
+                border: none;
+                width: 90px;
+                padding: 10px 0 10px 0;
+                margin-left: 255px;
+
+                    @include md{
+                        margin-left: 280px;
+                    }
+
+                    @include lg{
+                        margin-left: 235px;
+                    }
+
+                    @include xl{
+                        margin-left: 311px;
+                    }
+            }
+
+                @include md{
+                    grid-area: newsletter;
+                }
+            }
+
+            .follow{
+
+                
+                @include md{
+                    grid-area: follow;
+                    margin-left: 23px;
+
+                }
+
+                @include lg{
+                    margin-left: 100px;
+
+                }
+
+                ul{
+
+                padding-bottom: 40px;
+
+                    @include xl{
+                        margin-left: 30px;
+                    }
+
+                    li{
+                        display: inline;
+                        padding: 5px;
+    
+                    }
+                }
+
+                h4{
+                    margin-left: 0px;
+
+                    @include lg{
+                        margin-left: 50px;
+                        padding-bottom: 23px;
+                    }
+                    
+                    @include xl{
+                        margin-left: 80px;
+                    }
+               
+            }
+        }   
     }
-
 }

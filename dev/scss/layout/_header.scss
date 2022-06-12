@@ -1,6 +1,132 @@
 header{
-    .content{
-        display:grid;
-        grid-template-columns: 50% 50%;
-    }
-}
+    background-color: #3D5A80;
+    color: white;
+
+        .content{
+            
+            .site-logo{
+                display: block;
+                padding-bottom: 15px;
+                width:37px;
+               
+                
+                   
+
+                @include md{
+                display: inline-block;
+                width: 33px;
+                margin-left: 30px;
+                margin-top: 20px;
+                padding-bottom: 1px;
+                }
+
+                @include lg{
+                width: 40px;
+                margin-left: 45px;
+                margin-top: 25px;
+                }
+
+                @include xl{
+                width: 50px;
+                margin-left: 45px;
+                margin-top: 15px;
+                }
+            }
+
+            h1{
+                display: none;
+                font-weight: 600;
+                color: white;
+                font-family: 'Neucha';
+                letter-spacing: 0.5px;
+
+                @include md{
+                    display: inline-block;
+                    font-size: 32px;
+                    padding:20px;
+                }
+
+                @include lg{
+                    font-size: 36px;
+                }
+
+                @include xl{
+                    font-size: 40px;
+                }
+            }
+
+            span{
+                display: none;
+                font-size: 10px;
+                color: $yellow;
+                font-family: 'Neucha';
+                font-weight: 400;
+                letter-spacing: 0.3px;
+
+                @include md{
+                    display: block;
+                    padding-top: 5px;
+
+                }
+
+                @include lg{
+                    font-size: 12px;
+                }
+
+                @include xl{
+                    font-size: 13px;
+                }
+            }
+        }
+
+
+       
+            display: grid;
+            grid-template-columns: 16px auto 16px;
+            grid-template-areas: ". header .";
+            padding: 24px 0;
+            width: 100%;
+            background-color: $dark-blue;
+        
+        
+            div{
+                grid-area: header;
+                grid-template-columns: 50% auto;
+                grid-template-areas: "logo burger";
+        
+                @include lg{
+                    grid-template-areas: "logo nav";
+        
+                }
+        
+               
+        
+                .burger-container{
+                    
+                    justify-content: flex-end;
+                    align-items: center;
+
+                    @include md{
+                        display: none;
+                    
+                    }
+        
+                    @include lg{
+                        display: none;
+                    }
+        
+                    button{
+                        border: none;
+                        background-color: transparent;
+                        color: $yellow;
+                        font-size: 30px;
+                        
+        
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        
+    }   
