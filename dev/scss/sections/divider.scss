@@ -10,7 +10,7 @@
         grid-template-columns: 100%;
         gap: 15px;
 
-        @include md{
+        @include md {
             grid-template-columns: 50% auto;
         }
 
@@ -48,7 +48,7 @@
         }
 
         button{
-            color: $forestgreen;
+            color: $green;
             background-color: $yellow;
             padding: 1px;
             width: 140px;
